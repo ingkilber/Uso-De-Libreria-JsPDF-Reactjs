@@ -2,17 +2,26 @@ import { Grid, Typography, Container } from '@mui/material'
 import '../App.css';
 import LandingImage from '../img/background.jpg'
 
-function VerPdf(props) {
+function VerPdf() {
     
   return (
     <>
-      <Container id={'miId'.id} maxWidth="sm">
+    <div
+      className="mt4"
+      style={{
+        backgroundColor: "#1976d2",
+        width: "210mm",
+        minHeight: "297mm",
+        marginLeft: "auto",
+        marginRight: "auto"
+      }}
+    >
+      <Container maxWidth="sm">
         <Grid justify="center" alignItems="center">
           <div className="HomePageContainer">
             <Typography variant="h5">Lorem Ipsum App</Typography>
             <img
               alt="React Lorem Ipsum App"
-              style={{ height: "400px", width: "500px" }}
               src={LandingImage}
             ></img>
             <Typography variant="subtitle1">
@@ -24,6 +33,7 @@ function VerPdf(props) {
           </div>
         </Grid>
       </Container>
+      </div>
     </>
   );
 }
